@@ -17,13 +17,13 @@ using namespace std;
 class Vehicle
 {
 public:
-    virtual void Input() = 0;                     // ââîä
-    virtual void Output() = 0;                    // âûâîä
-    virtual double FuelConsumption() = 0;         // ðàñõîä òîïëèâà
-    virtual double GetCost() = 0;                 // ïîëó÷åíèå ñòîèìîñòè
-    virtual void SetCost(double cost) = 0;        // óñòàíîâêà ñòîèìîñòè
-    virtual int Payload() = 0;                    // ãðóçîïîäú¸ìíîñòü
-    virtual int PassengerSeats() = 0;             // êîëè÷åñòâî ìåñò äëÿ ïàññàæèðîâ
+    virtual void Input() = 0;                     // ввод
+    virtual void Output() = 0;                    // вывод
+    virtual double FuelConsumption() = 0;         // расход топлива
+    virtual double GetCost() = 0;                 // получение стоимости
+    virtual void SetCost(double cost) = 0;        // установка стоимости
+    virtual int Payload() = 0;                    // грузоподъёмность
+    virtual int PassengerSeats() = 0;             // количество мест для пассажиров
 
 };
 
@@ -31,10 +31,10 @@ public:
 class Car : public Vehicle 
 {
 private:
-    double fuelConsumption;                     // ïîòðåáëåíèå òîïëèâà
-    double cost;                                // ñòîèìîñòü
-    int payload;                               // íàãðóçêà
-    int numPassengerSeats;                     // ìåñò äëÿ ïàññàæèðîâ
+    double fuelConsumption;                     
+    double cost;                                
+    int payload;                                
+    int numPassengerSeats;                      
 public:
     Car()
     {
